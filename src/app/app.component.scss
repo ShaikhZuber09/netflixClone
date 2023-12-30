@@ -1,18 +1,4 @@
-.logo{
-    display: block;
- 
-     width: 10rem;
-    height: 5rem;
-        >img{
-            height: 100%;
-            width: 100%;
-        }
 
-       
-}
-button.signUp{
-    height: 2.5rem;
-}
 
 .bgMain{
     min-height: 100vh;
@@ -28,14 +14,6 @@ background-attachment: fixed;
     background-color: rgb(35,35,35);
 }
 
-.mailSub{
-    background: transparent;
-
-    &:focus{
-        background: transparent;
-    }
-   
-}
 
 .main-heading{
 color: white;
@@ -45,7 +23,6 @@ font-weight: bolder;
 }
 
 .subHeading{
-    margin-bottom: 1.5rem;
     font-size: 2rem;
 }
 

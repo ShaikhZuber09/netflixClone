@@ -1,0 +1,21 @@
+<div class="row" [ngClass]="{
+    'flex-row-reverse':dataObj.rowReverse
+}">
+    <div class="col-md-6 text-white">
+        <ng-content select="[question]"></ng-content>
+        <ng-content select="[heading2]"></ng-content>
+    
+    </div>
+    <div class="col-md-6">
+        <img class="w-100"
+           [src]="dataObj.imageUrl"
+            alt="" srcset="">
+        <video *ngIf="dataObj.videoUrl" [ngClass]="{
+            'playVideo':dataObj.class == 1,
+            'playVideo2':dataObj.class == 2
+        }" autoplay muted loop>
+            <source
+            [src]="dataObj.videoUrl">
+        </video>
+    </div>
+</div>
