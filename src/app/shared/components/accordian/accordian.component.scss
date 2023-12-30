@@ -1,0 +1,23 @@
+.subHeading{
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    color: white;
+    background-color:  rgb(35,35,35);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+
+    span{
+        cursor: pointer;
+    }
+
+    &:hover{
+        background-color:   rgb(65,65,65);
+
+    }
+}
+.content{
+    color: white;
+    padding: 1rem 2rem;
+    background-color:  rgb(35,35,35);
+}
