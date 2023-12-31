@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-getting-started',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./getting-started.component.scss']
 })
 export class GettingStartedComponent implements OnInit {
-
-  constructor() { }
+ @ViewChild('gettingStarted') myForm:FormGroup | undefined
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
+  onSubmit(){
+if(this.myForm?.valid){
+this.router.navigate(['/signIn'])
+}
 
+  }
 }

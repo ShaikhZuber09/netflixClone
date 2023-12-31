@@ -3,23 +3,25 @@
 </h5>
 <div class="row pb-4">
     <div class="col-md-8 offset-md-2">
+       <form #gettingStarted='ngForm' (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-md-1">
                 &nbsp;
             </div>
             <div class="col-md-7">
                 <div class="form-group align-self-center">
-                    <input type="text" class="form-control mailSub text-white"
-                        placeholder="Email Address" title="mail">
+                    <input type="email" class="form-control mailSub text-white"
+                        placeholder="Email Address" name="email" title="email" ngModel required>
 
                 </div>
             </div>
             <div class="col-md-3 ">
-                <button class="btn btn-danger btn-block py-2" routerLink="signIn">
+                <button type="submit" class="btn btn-danger btn-block py-2" >
                     Get Started
                 </button>
             </div>
         </div>
+       </form>
 
     </div>
 </div>

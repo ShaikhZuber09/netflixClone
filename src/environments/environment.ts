@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  loginbaseUrl:"https://netflixclone-1e4c4-default-rtdb.firebaseio.com/users"
 };
 
 /*

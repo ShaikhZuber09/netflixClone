@@ -1,4 +1,3 @@
-
 <div class="bgMain">
     <div class="container">
         <div class="row">
@@ -13,23 +12,27 @@
                 <div class="card px-md-4">
                     <div class="card-body">
                         <h2 class="text-white">{{ (!isAccount)?"Sign Up":"Sign In"}}</h2>
-                        <ng-container *ngIf="!isAccount">
+                        <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                            <ng-container *ngIf="!isAccount">
+                                <div class="form-group my-4">
+                                    <input name="Name" type="text" class="form-control" placeholder="Name" ngModel>
+                                </div>
+                                <div class="form-group my-4">
+                                    <input name="Mobile" type="number" class="form-control" placeholder="Mobile " ngModel>
+                                </div>
+                            </ng-container>
                             <div class="form-group my-4">
-                                <input title="Name" type="text" class="form-control" placeholder="Name">
+                                <input name="email" type="text" class="form-control" placeholder="Email Address" ngModel>
                             </div>
                             <div class="form-group my-4">
-                                <input title="Mobile" type="number" class="form-control" placeholder="Mobile ">
+                                <input name="password" type="text" class="form-control" placeholder="Password " ngModel>
                             </div>
-                        </ng-container>
-                        <div class="form-group my-4">
-                            <input title="email" type="text" class="form-control" placeholder="Email Address">
-                        </div>
-                        <div class="form-group my-4">
-                            <input title="password" type="text" class="form-control" placeholder="Password ">
-                        </div>
-                        <button class="btn btn-danger btn-block my-5">{{ (!isAccount)?"Sign Up":"Sign In"}}</button>
+                            <button type="submit" class="btn btn-danger btn-block my-5">{{ (!isAccount)?"Sign Up":"Sign
+                                In"}}</button>
+                        </form>
 
-                        <p>{{ (!isAccount)?"Already had an account":"Don't Have an account?"}} <span class="text-white redirect" (click)="isAccount=!isAccount"> {{ (!isAccount)?"Sign In":"Sign Up"}}</span></p>
+                        <p class="text-muted">{{ (!isAccount)?"Already had an account":"Don't Have an account ?"}} <span
+                                class="redirect" (click)="onClick()"> {{ (!isAccount)?"Sign In":"Sign Up"}}</span></p>
                     </div>
                 </div>
             </div>

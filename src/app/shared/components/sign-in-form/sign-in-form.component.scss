@@ -27,4 +27,8 @@ background-attachment: fixed;
 .redirect{
     cursor: pointer;
     text-decoration:underline ;
+color: aliceblue;
+    &:hover{
+        color: blue;
+    }
 }

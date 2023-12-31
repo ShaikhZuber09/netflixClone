@@ -2,8 +2,12 @@
     'flex-row-reverse':dataObj.rowReverse
 }">
     <div class="col-md-6 text-white">
-        <ng-content select="[question]"></ng-content>
-        <ng-content select="[heading2]"></ng-content>
+        <h2 class="main-heading ">
+          {{dataObj.h1}}
+        </h2>
+        <h4 class="subHeading">
+            {{dataObj.h2}}
+        </h4>
     
     </div>
     <div class="col-md-6">

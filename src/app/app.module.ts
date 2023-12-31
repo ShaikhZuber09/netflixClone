@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,8 @@ import { GettingStartedComponent } from './shared/components/getting-started/get
 import { NetflinInfoComponent } from './shared/components/netflin-info/netflin-info.component';
 import { SignInFormComponent } from './shared/components/sign-in-form/sign-in-form.component';
 import { LandingPageComponent } from './shared/components/landing-page/landing-page.component';
+import { DividerComponent } from './shared/components/divider/divider.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { LandingPageComponent } from './shared/components/landing-page/landing-p
     GettingStartedComponent,
     NetflinInfoComponent,
     SignInFormComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    DividerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
