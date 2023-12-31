@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in-form',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-in-form.component.scss']
 })
 export class SignInFormComponent implements OnInit {
-
-  constructor() { }
+ isAccount:boolean=false;
+  constructor( private _routes:ActivatedRoute) { }
 
   ngOnInit(): void {
+  if( this._routes.routeConfig?.path === "signIn"){
+    this.isAccount= true;
+  }
+  else{
+    this.isAccount=false;
+  }
+   
+    
   }
 
 }

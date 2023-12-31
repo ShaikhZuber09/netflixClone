@@ -1,4 +1,38 @@
 
 <div class="bgMain">
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a title="logo" class="logo">
+                    <img src="./assets/images/logo.png" alt="" srcset="">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+                <div class="card px-md-4">
+                    <div class="card-body">
+                        <h2 class="text-white">{{ (!isAccount)?"Sign Up":"Sign In"}}</h2>
+                        <ng-container *ngIf="!isAccount">
+                            <div class="form-group my-4">
+                                <input title="Name" type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="form-group my-4">
+                                <input title="Mobile" type="number" class="form-control" placeholder="Mobile ">
+                            </div>
+                        </ng-container>
+                        <div class="form-group my-4">
+                            <input title="email" type="text" class="form-control" placeholder="Email Address">
+                        </div>
+                        <div class="form-group my-4">
+                            <input title="password" type="text" class="form-control" placeholder="Password ">
+                        </div>
+                        <button class="btn btn-danger btn-block my-5">{{ (!isAccount)?"Sign Up":"Sign In"}}</button>
+
+                        <p>{{ (!isAccount)?"Already had an account":"Don't Have an account?"}} <span class="text-white redirect" (click)="isAccount=!isAccount"> {{ (!isAccount)?"Sign In":"Sign Up"}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

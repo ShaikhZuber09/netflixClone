@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, Observable, Subject, observable } from 'rxjs';
 
 @Component({
@@ -9,9 +10,15 @@ import { BehaviorSubject, Observable, Subject, observable } from 'rxjs';
 export class AppComponent implements OnInit {
 
   title = 'netflixClone';
+
+
+  constructor(){
+
+  }
   ngOnInit(): void {
 
-  
+
   }
+
   
 }

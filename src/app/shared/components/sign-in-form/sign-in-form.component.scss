@@ -6,3 +6,25 @@ background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 }
+
+.logo{
+    display: block;
+ 
+     width: 10rem;
+    height: 5rem;
+        >img{
+            height: 100%;
+            width: 100%;
+        }
+
+       
+}
+
+.card{
+    background-color: rgba(0,0,0,.75);
+    
+}
+.redirect{
+    cursor: pointer;
+    text-decoration:underline ;
+}

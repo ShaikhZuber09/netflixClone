@@ -8,6 +8,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { GettingStartedComponent } from './shared/components/getting-started/getting-started.component';
 import { NetflinInfoComponent } from './shared/components/netflin-info/netflin-info.component';
 import { SignInFormComponent } from './shared/components/sign-in-form/sign-in-form.component';
+import { LandingPageComponent } from './shared/components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SignInFormComponent } from './shared/components/sign-in-form/sign-in-fo
     NavbarComponent,
     GettingStartedComponent,
     NetflinInfoComponent,
-    SignInFormComponent
+    SignInFormComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
