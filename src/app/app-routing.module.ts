@@ -18,6 +18,11 @@ const routes: Routes = [
     path:"signUp",
     pathMatch:'full',
     component: SignInFormComponent
+  },
+  {
+    path:"movies",
+    pathMatch:'full',
+    loadChildren:()=>import('./shared/modules/movies/movies.module').then(m=>m.MoviesModule)
   }
 ];
 

@@ -15,20 +15,19 @@
                         <form #myForm="ngForm" (ngSubmit)="onSubmit()">
                             <ng-container *ngIf="!isAccount">
                                 <div class="form-group my-4">
-                                    <input name="Name" type="text" class="form-control" placeholder="Name" ngModel>
+                                    <input name="Name" type="text" class="form-control" placeholder="Name" ngModel required>
                                 </div>
                                 <div class="form-group my-4">
-                                    <input name="Mobile" type="number" class="form-control" placeholder="Mobile " ngModel>
+                                    <input name="Mobile" type="number" class="form-control" placeholder="Mobile " ngModel required>
                                 </div>
                             </ng-container>
                             <div class="form-group my-4">
-                                <input name="email" type="text" class="form-control" placeholder="Email Address" ngModel>
+                                <input name="email" type="text" class="form-control" placeholder="Email Address" ngModel required>
                             </div>
                             <div class="form-group my-4">
-                                <input name="password" type="text" class="form-control" placeholder="Password " ngModel>
+                                <input name="password" type="text" class="form-control" placeholder="Password " ngModel required>
                             </div>
-                            <button type="submit" class="btn btn-danger btn-block my-5">{{ (!isAccount)?"Sign Up":"Sign
-                                In"}}</button>
+                            <button type="submit" class="btn btn-danger btn-block my-5">{{ (!isAccount)?"Sign Up":"SignIn"}}</button>
                         </form>
 
                         <p class="text-muted">{{ (!isAccount)?"Already had an account":"Don't Have an account ?"}} <span
