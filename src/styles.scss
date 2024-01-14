@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+#mainSlider .owl-theme .owl-dots, #mainSlider .owl-theme .owl-nav{
+    
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+     [class*=owl-] {
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
+        background: transparent;     
+        border-radius: 0;
+    }
+}

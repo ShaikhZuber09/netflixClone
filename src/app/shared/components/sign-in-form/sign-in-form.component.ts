@@ -19,20 +19,24 @@ export class SignInFormComponent implements OnInit {
   }
   onSubmit() {
     if (this.myForm?.valid) {
+
+      let obj=this.myForm.value
       if (!this.isAccount) {
-        this._login.signUp(this.myForm?.value)
-        console.log(this.myForm?.value);
+        this._login.signUp(obj)
+        // console.log(this.myForm?.value);
 
       } else {
 
-        console.log(this.myForm?.value);
-
-        if(this._login.signIn(this.myForm?.value)){
-          alert('Login Successfully')
-          this._router.navigate(['movies'])
-        }else{
-          alert('Invalid creditentials, Please Enter Email and Password')
-        }
+        this._login.signIn()
+             .subscribe(res=>{
+             if( res.some(user => (user.email == obj.email && user.password == obj.password))){
+              alert('Login Successfully')
+               this._router.navigate(['movies'])
+             }else{
+              alert('Invalid creditentials, Please Enter Valid Email and Password')
+            }
+              
+             })
         
       }
     }

@@ -6,22 +6,19 @@ import { LandingPageComponent } from './shared/components/landing-page/landing-p
 const routes: Routes = [
   {
     path:"",
-    pathMatch:'full',
     component:LandingPageComponent
   }
 ,
   {
     path:"signIn",
-    pathMatch:'full',
+    
     component: SignInFormComponent
   },{
     path:"signUp",
-    pathMatch:'full',
     component: SignInFormComponent
   },
   {
     path:"movies",
-    pathMatch:'full',
     loadChildren:()=>import('./shared/modules/movies/movies.module').then(m=>m.MoviesModule)
   }
 ];

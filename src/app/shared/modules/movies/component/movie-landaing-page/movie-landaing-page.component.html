@@ -1,1 +1,8 @@
-<!-- <app-navbar></app-navbar> -->
+<h3 class="bg-danger text-center m-0 p-2 text-white">Popular Movies</h3>
+<app-corousel-holder [movieArr]="popularArr |async" ></app-corousel-holder>
+<h3 class="bg-danger text-center m-0 p-2 text-white">Now Playing Movies</h3>
+<app-corousel-holder [movieArr]="nowPlaying |async" ></app-corousel-holder>
+<h3 class="bg-danger text-center m-0 p-2 text-white">Upcoming Movies</h3>
+<app-corousel-holder [movieArr]="upComing |async" class="mt--5"></app-corousel-holder>
+<h3 class="bg-danger text-center m-0 p-2 text-white">Top Rated Movies</h3>
+<app-corousel-holder [movieArr]="topRated |async" class="mt--5"></app-corousel-holder>

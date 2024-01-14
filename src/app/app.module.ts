@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,22 +18,23 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     AccordianComponent,
-    NavbarComponent,
     GettingStartedComponent,
     NetflinInfoComponent,
     SignInFormComponent,
     LandingPageComponent,
-    DividerComponent
+    DividerComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
 
   providers: [],
   bootstrap: [AppComponent],
-  exports:[NavbarComponent]
+  
 })
 export class AppModule { }

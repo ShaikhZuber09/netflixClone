@@ -1,0 +1,21 @@
+
+  <owl-carousel-o [options]="customOptions" id="mainSlider">
+  
+    <ng-template carouselSlide *ngFor="let movie of movieArr;index as i">
+
+        <figure class="poster" [routerLink]="movie.id">
+            <img [src]="'https://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="movie">
+            <figcaption class="d-flex flex-column justify-content-center pl-5" >
+                <h3 class="display-3">
+                    {{movie.title || movie.original_title}}
+                </h3>
+                <em>
+                    {{movie.overview}}
+                </em>
+            </figcaption>
+        </figure>
+    
+    </ng-template>  
+   
+  </owl-carousel-o>
+  

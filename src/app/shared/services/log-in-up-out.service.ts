@@ -20,24 +20,18 @@ export class LogInUpOutService {
     })
   }
 
-  signIn(obj: any) {
-    this._http.get(this.baseUrl).pipe(
+  signIn() {
+   return this._http.get(this.baseUrl).pipe(
       map((res: any) => {
         let arr = []
         for (const key in res) {
           arr.push({
             ...res[key], userId: key
-
           })
         }
         return arr
       })
     )
-      .subscribe(res => {
-        this.userArr = res
-      })
- 
-      return  this.userArr.some(user => (user.email == obj.email && user.password == obj.password))
 
   }
 
